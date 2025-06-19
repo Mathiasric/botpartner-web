@@ -14,33 +14,30 @@ html {
 
 /* === HERO === */
 header.hero {
+    display: flex;
+      flex-direction: column;
   background-color: #202942;
+   align-items: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 3rem 1.5rem 2.5rem;
+  padding: 1.75rem 1.5rem 1.75rem; /* ↓ redusert padding */
   position: relative;
   overflow: hidden;
 }
-.hero-logo {
-  height: 200px;
-  max-width: 240px;
-  margin-bottom: 0.5rem;
-  object-fit: contain;
-  display: block;
-  opacity: 0.95;
-    right: 32px;
-  z-index: 10;  
-   top: 2px;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
-  position: absolute;
+
+.hero-logo-centered {
+  height: 130px;           /* tilbake til kompakt høyde */
+  max-width: 160px;
+  margin: 0.75rem auto 1rem;
 }
 
-
 .hero-eyebrow {
+margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
   font-size: 0.75rem;
   color: #6f7ca0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.25rem;
 }
 
 .hero-title {
@@ -51,15 +48,17 @@ header.hero {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #aab8d4;
-  margin: 0.6rem 0;
+   margin-top: 0.25rem; 
+   margin-bottom: 0.1rem;
 }
 
 .hero-tagline {
   font-size: 1rem;
   color: #f0f0f0;
-  margin: 0.75rem 0 1.5rem;
+margin-top: 0.2rem;
+  margin-bottom: 0.75rem; 
 }
 
 .cta-button {
@@ -81,18 +80,15 @@ header.hero {
 .scroll-down-inline {
   font-size: 1.2rem;
   margin-left: 0.5rem;
-  color: #ffffff;              /* ← kontrollerer pilens farge */
-  text-decoration: none;      /* ← fjerner understrek */
+  color: #ffffff;
+  text-decoration: none;
   animation: bounce 2s infinite;
   opacity: 0.6;
-
 }
 
-.scroll-down-inline:hover  {
+.scroll-down-inline:hover {
   opacity: 0.8;
 }
-
-
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -101,8 +97,8 @@ header.hero {
 
 /* === INNHOLDSEKSJONER === */
 section {
-max-width: min(100%, 960px);
-width: 90%;
+  max-width: min(100%, 960px);
+  width: 90%;
   margin: 3.5rem auto;
   padding: 0 1.5rem;
   opacity: 0;
@@ -192,7 +188,7 @@ section ul li, section ol li {
   text-decoration: none;
   color: #202942;
   max-width: 260px;
-   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
 .demo-card img {
@@ -213,7 +209,7 @@ section ul li, section ol li {
   line-height: 1.4;
 }
 
-
+/* === PRIS / KONTAKT === */
 section.demo,
 section.pris {
   background-color: #f8fafd;
@@ -222,6 +218,7 @@ section.pris {
   margin-top: 4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
+
 .pris ul {
   padding-left: 1.2rem;
 }
@@ -230,7 +227,6 @@ section.pris {
   margin-bottom: 0.5rem;
 }
 
-/* === KONTAKT === */
 .kontakt a {
   color: #2d5be3;
   text-decoration: none;
@@ -279,8 +275,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #37446c;
 }
+
+/* === SMARTE SEKSJONER === */
 .section-card {
-  background-color:#f8fafd;
+  background-color: #f8fafd;
   border-radius: 16px;
   padding: 2.5rem 1.75rem;
   margin-top: 3rem;
@@ -307,22 +305,28 @@ button[type="submit"]:hover {
 }
 
 .feature-highlight {
-  background-color: #fefcf9;/* lys beige / off-white */
+  background-color: #fefcf9;
   padding: 3rem 2rem;
   margin-top: 3rem;
-    width: 100%;
+  width: 100%;
 }
+
 .feature-highlight section {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-/* === MEDIA QUERIES === */
 
-/* 📱 Mobiltilpasning – for skjermer opp til 600px */
+/* === MEDIA QUERIES === */
 @media (max-width: 600px) {
   .hero-title {
     font-size: 2rem;
+  }
+
+  .hero-logo-centered {
+    height: 140px;
+    max-width: 180px;
+    margin: 1rem auto;
   }
 
   .hero-subtitle,
@@ -333,21 +337,6 @@ button[type="submit"]:hover {
   .hero-tagline {
     font-size: 0.95rem;
     line-height: 1.4;
-  }
-
-  .hero-logo {
-    position: static;
-    margin: 0 auto 1rem;
-    display: block;
-    height: 120px;
-    max-width: 180px;
-  }
-
-  .scroll-down-inline {
-    display: block;
-    margin: 0.5rem auto 0;
-    font-size: 1.5rem;
-    text-align: center;
   }
 
   .demo-gallery {
@@ -362,9 +351,21 @@ button[type="submit"]:hover {
   section {
     padding: 0 1rem;
   }
+
+  .scroll-down-inline {
+    display: block;
+    margin: 0.5rem auto 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  header.hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
-/* 💻 Større skjermer – forbedret typografi */
+/* Større skjermer */
 @media (min-width: 1024px) {
   .hero-title {
     font-size: 2.5rem;
@@ -379,9 +380,19 @@ button[type="submit"]:hover {
   }
 }
 
-/* 🎯 CTA sticky knapp – vises kun på større skjermer */
+/* 🎯 Sticky CTA */
 @media (min-width: 600px) {
   .cta-sticky {
     display: block;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #ff7e47;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
   }
 }
