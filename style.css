@@ -356,8 +356,8 @@ button[type="submit"]:hover {
     padding: 0 1rem;
   }
  section.hvordan {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1rem; !important;
+    padding-right: 1rem; !important;
   }
   .scroll-down-inline {
     display: block;
