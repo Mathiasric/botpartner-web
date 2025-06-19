@@ -5,6 +5,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
+  overflow-x: hidden;
 }
 
 html {
@@ -19,6 +20,20 @@ header.hero {
   position: relative;
   overflow: hidden;
 }
+.hero-logo {
+  height: 200px;
+  max-width: 240px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+  display: block;
+  opacity: 0.95;
+    right: 32px;
+  z-index: 10;  
+   top: 2px;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+  position: absolute;
+}
+
 
 .hero-eyebrow {
   font-size: 0.75rem;
@@ -36,9 +51,9 @@ header.hero {
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #aab8d4;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
 }
 
 .hero-tagline {
@@ -63,15 +78,21 @@ header.hero {
   background-color: #e36934;
 }
 
-.scroll-down {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  color: #aab8d4;
+.scroll-down-inline {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  color: #ffffff;              /* ← kontrollerer pilens farge */
+  text-decoration: none;      /* ← fjerner understrek */
   animation: bounce 2s infinite;
-  text-decoration: none;
   opacity: 0.6;
+
 }
+
+.scroll-down-inline:hover  {
+  opacity: 0.8;
+}
+
+
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -192,13 +213,7 @@ section ul li, section ol li {
   line-height: 1.4;
 }
 
-/* === PRIS === */
-.pris-intro {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #444;
-    background-color: #f2f4f7; 
-}
+
 section.demo,
 section.pris {
   background-color: #f8fafd;
@@ -264,46 +279,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #37446c;
 }
-
-/* === MOBIL === */
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle,
-  .cta-button {
-    font-size: 1rem;
-  }
-
-  .demo-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .demo-card {
-    max-width: 90%;
-  }
-}
-.cta-sticky {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background-color: #ff7e47;
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 999;
-  display: none;
-}
-
-@media (min-width: 600px) {
-  .cta-sticky {
-    display: block;
-  }
-}
 .section-card {
   background-color:#f8fafd;
   border-radius: 16px;
@@ -329,4 +304,84 @@ button[type="submit"]:hover {
   font-size: 1.05rem;
   line-height: 1.7;
   color: #444;
+}
+
+.feature-highlight {
+  background-color: #fefcf9;/* lys beige / off-white */
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+    width: 100%;
+}
+.feature-highlight section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+/* === MEDIA QUERIES === */
+
+/* 📱 Mobiltilpasning – for skjermer opp til 600px */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle,
+  .cta-button {
+    font-size: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .hero-logo {
+    position: static;
+    margin: 0 auto 1rem;
+    display: block;
+    height: 120px;
+    max-width: 180px;
+  }
+
+  .scroll-down-inline {
+    display: block;
+    margin: 0.5rem auto 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .demo-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-card {
+    max-width: 90%;
+  }
+
+  section {
+    padding: 0 1rem;
+  }
+}
+
+/* 💻 Større skjermer – forbedret typografi */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+}
+
+/* 🎯 CTA sticky knapp – vises kun på større skjermer */
+@media (min-width: 600px) {
+  .cta-sticky {
+    display: block;
+  }
 }
