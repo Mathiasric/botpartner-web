@@ -1,0 +1,558 @@
+/* =========================
+   DESIGN-TOKENS
+   (kan justeres samlet)
+========================= */
+:root{
+  --brand:#202942;           /* mørk blå */
+  --brand-900:#1b2439;
+  --bg:#f9f9f9;
+  --panel:#f8fafd;
+  --muted:#6b7280;
+  --cta:#ff7e47;             /* oransje */
+  --cta-600:#e36934;
+  --accent:#5fd0c6;          /* myk mint, valgfri aksent */
+  --shadow-xs:0 2px 8px rgba(0,0,0,.06);
+  --shadow-sm:0 4px 12px rgba(0,0,0,.06);
+  --shadow-md:0 8px 24px rgba(0,0,0,.08);
+}
+
+/* =========================
+   GLOBALT / LAYOUT
+========================= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; overflow-x: hidden; max-width: 100%; }
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--bg);
+}
+
+/* layout-reserver: header/main/footer */
+header.hero { flex: 0 0 auto; }
+main        { flex: 1 0 auto; }
+footer      { flex: 0 0 auto; }
+
+/* =========================
+   HERO
+========================= */
+header.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: #fff;
+  padding: 2.25rem 1.5rem 2.25rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-900) 100%);
+}
+
+.hero-logo-centered {
+  height: 130px;
+  max-width: 160px;
+  margin: 0.75rem auto 1rem;
+}
+
+.hero-eyebrow {
+  margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  color: #aab8d4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-top: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta-button {
+  background-color: var(--cta);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform .1s ease, box-shadow .2s ease;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: .2px;
+  box-shadow: 0 4px 12px rgba(255,126,71,.22);
+}
+.cta-button:hover { background-color: var(--cta-600); transform: translateY(-1px); }
+.cta-button:active { transform: translateY(0); box-shadow: var(--shadow-xs); }
+
+.scroll-down-inline {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+.scroll-down-inline:hover { opacity: 0.9; }
+
+/* =========================
+   INNHOLDSEKSJONER
+========================= */
+section {
+  max-width: min(100%, 960px);
+  width: 90%;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.fade-in-visible { opacity: 1; transform: translateY(0); }
+
+section h2 {
+  font-size: 1.9rem;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+section h3 {
+  font-size: 1.2rem;
+  color: #37446c;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* LISTER (standard) */
+section ul, section ol { padding-left: 1.2rem; }
+section ul li, section ol li { margin-bottom: 0.5rem; }
+
+/* =========================
+   FORDELER
+========================= */
+.fordeler-liste { list-style: none; padding-left: 0; }
+.fordeler-liste li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.fordeler-liste li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+}
+
+/* =========================
+   “HVA KAN CHATBOTEN SVARE PÅ?” – panel
+========================= */
+.kan-svare {
+  background: #f7faff;
+  border: 1px solid #e7eef9;
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin: 28px auto;
+  box-shadow: 0 4px 28px rgba(18, 28, 45, 0.04);
+  max-width: 980px;
+}
+.kan-svare h2 { margin: 0 0 10px; letter-spacing: .2px; }
+.kan-svare > p { color: #4a5568; margin: 6px 0 14px; }
+
+.kan-svare h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin: 18px 0 6px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* Lister i panelet (uten standard bullets) */
+.kan-svare ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 14px;
+}
+.kan-svare li {
+  display: flex; align-items: baseline; gap: 8px;
+  padding: 6px 2px;
+  color: #2d3748;
+  line-height: 1.55;
+}
+/* Delikate avdelere mellom listene */
+.kan-svare ul:not(:last-of-type) {
+  border-bottom: 1px solid #edf2fb;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+/* Valgfri disclaimer-boks nederst i panelet */
+.kan-svare .disclaimer {
+  background: #f8fafc;
+  border: 1px solid #e6edf7;
+  border-left: 3px solid #2c3e66;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #4a5568 !important;
+  margin-top: 10px !important;
+}
+
+/* =========================
+   HVORDAN / BESTILL – nummererte badges
+========================= */
+section.hvordan ol,
+#bestill ol {
+  counter-reset: steg;
+  list-style: none;
+  padding-left: 0;
+}
+section.hvordan ol li,
+#bestill ol li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 0.65rem;
+}
+section.hvordan ol li::before,
+#bestill ol li::before {
+  counter-increment: steg;
+  content: counter(steg) ".";
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.6rem; height: 1.6rem; line-height: 1.6rem;
+  text-align: center; border-radius: 8px;
+  font-size: 0.9rem; font-weight: 700; color: #fff;
+  background: #202942;
+}
+#bestill ol li::before { background: var(--cta); }
+
+/* =========================
+   DEMO
+========================= */
+.demo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: left;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.demo-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #202942;
+  max-width: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.demo-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.demo-card img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+.demo-card img:hover { transform: scale(1.03); }
+.demo-caption {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.4;
+  padding: .5rem .25rem 0 0;
+}
+
+/* =========================
+   PRIS / KONTAKT – eksisterende seksjoner
+========================= */
+section.demo,
+section.pris {
+  background-color: var(--panel);
+  border-radius: 16px;
+  padding: 3rem 1.5rem;
+  margin-top: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+.pris ul { padding-left: 1.2rem; }
+.pris ul li { margin-bottom: 0.5rem; }
+section.pris .cta-button { margin-top: 0.75rem; }
+
+/* === Nye pris-kort (bygger oppå) === */
+.price-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.25rem;
+  margin-top:1rem;
+}
+.price-card{
+  background:#fff;
+  border:1px solid #eaeef8;
+  border-radius:14px;
+  padding:1.25rem 1.25rem 1.5rem;
+  box-shadow:var(--shadow-sm);
+}
+.price-card h3{ margin:.25rem 0 .5rem; color:var(--brand); }
+.price-card .price{ font-size:1.4rem; margin:.25rem 0 .75rem; }
+.price-card .per{ color:#555; font-weight:400; }
+.price-card ul{ padding-left:1.1rem; margin:0 0 1rem; }
+.price-card.featured{ border-color:var(--cta); box-shadow:0 8px 28px rgba(255,126,71,.12); }
+.small-note{ color:#6b7280; margin-top:.5rem; }
+
+/* KONTAKT */
+.kontakt a { color: #2d5be3; text-decoration: none; font-weight: 500; }
+.kontakt a:hover { text-decoration: underline; }
+
+section.kontakt { text-align: center; }
+section.kontakt p { max-width: 680px; margin: 0.5rem auto 0; }
+
+.kontakt-ingress { color:#555; margin: 6px 0 14px; }
+.contact-lines { list-style: none; padding: 0; margin: 16px auto 0; max-width: 680px; }
+.contact-lines li {
+  display: flex; gap: 10px; align-items: baseline; justify-content: center;
+  padding: 8px 0; border-top: 1px solid #eef1f6;
+}
+.contact-lines li:first-child { border-top: none; }
+.icon  { font-size: 1rem; opacity: .9; }
+.label { color:#555; font-weight: 600; min-width: 110px; }
+.value { color:#333; }
+.accent{ color:#202942; }
+.accent a{ color:#202942; }
+
+/* =========================
+   SMARTE SEKSJONER
+========================= */
+.section-card {
+  background-color: var(--panel);
+  border-radius: 16px;
+  padding: 2.5rem 1.75rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Liten spacing-fiks i FAQ når h3 kommer rett etter h2 */
+.section-card h2 + h3 { margin-top: 0.5rem; }
+
+/* Smart-AI seksjon (beholdt) */
+.smart-ai {
+  background-color: #f9fbff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 3.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+.smart-ai h2 { color: var(--brand); margin-bottom: 1rem; }
+.smart-ai p  { font-size: 1.05rem; line-height: 1.7; color: #444; }
+
+/* Wrapper som allerede finnes */
+.feature-highlight {
+  background-color: #fefcf9;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+.feature-highlight section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hjelpetekster */
+.pdf-note { font-size: 0.92rem; color: #6b7280; margin-top: 0.75rem; }
+
+/* Lenkestil i brødtekst (behold CTA uendret) */
+section a:not(.cta-button):not(.demo-card) {
+  color: #2d5be3;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+section a:not(.cta-button):hover { text-decoration-thickness: 2px; }
+
+/* =========================
+   FAQ (accordion med <details>)
+========================= */
+.faq-item{
+  border:1px solid #e7eef9;
+  background:#fff;
+  border-radius:12px;
+  padding:.75rem 1rem;
+  margin:.75rem 0;
+}
+.faq-item > summary{
+  cursor:pointer;
+  font-weight:600;
+  color:#1f2a44;
+  list-style:none;
+}
+.faq-item > summary::-webkit-details-marker{ display:none; }
+.faq-item > p{ margin:.5rem 0 0 0; color:#374151; }
+
+/* =========================
+   FORM (beholdt)
+========================= */
+form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+input, textarea {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+button[type="submit"] {
+  background-color: var(--brand);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover { background-color: #37446c; }
+
+/* =========================
+   FOOTER (ikke-sticky)
+========================= */
+footer, .site-footer {
+  position: static;
+  margin-top: auto;                   /* skyver footer ned ved korte sider */
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 32px;                      /* litt større som du ønsket */
+  font-size: .95rem;
+}
+footer p, .site-footer p { margin: 0; }
+
+/* Kontakt: gjør lenkene ikke-klikkbare og uten link-stil */
+.kontakt .contact-lines a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;   /* deaktiver klikking */
+  cursor: default;
+}
+
+/* Kontakt: “bobler”/chips for label og value */
+.contact-lines li {
+  gap: 14px;
+}
+
+.contact-lines .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #f0f4ff;           /* mild blå bak ikon */
+  box-shadow: inset 0 0 0 1px #e1e8ff;
+  font-size: 1rem;
+}
+
+.contact-lines .label {
+  background: #f6f7fb;
+  border: 1px solid #e9edf6;
+  border-radius: 999px;
+  padding: 6px 12px;
+  min-width: auto;               /* overstyr tidligere min-width */
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.contact-lines .value {
+  background: #fff;
+  border: 1px solid #e9edf6;
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: #111827;
+}
+
+/* Finere avdelere mellom radene */
+.contact-lines li {
+  border-top: 1px dashed #e7ecf6;
+}
+.contact-lines li:first-child {
+  border-top: none;
+}
+section.kontakt h2 {
+  letter-spacing: .2px;
+  color: #1f2937;
+}
+section.kontakt .kontakt-ingress {
+  color: #4b5563;
+}
+section.kontakt { margin-bottom: 2rem; }
+
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 600px) {
+  .hero-title { font-size: 2rem; }
+
+  .hero-logo-centered {
+    height: 140px;
+    max-width: 180px;
+    margin: 1rem auto;
+  }
+
+  .hero-subtitle,
+  .cta-button { font-size: 1rem; }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .demo-gallery { flex-direction: column; align-items: center; }
+  .demo-card { max-width: 90%; }
+
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .feature-highlight {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .scroll-down-inline {
+    display: block;
+    margin: 0.5rem auto 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  header.hero { padding-top: 2rem; padding-bottom: 2rem; }
+
+  footer, .site-footer { padding: 24px; font-size:.95rem; }
+
+  .price-cards{ grid-template-columns:1fr; }
+}
