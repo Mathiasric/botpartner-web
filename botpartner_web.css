@@ -441,7 +441,22 @@ main .contact{
   padding:32px;
   font-size:.95rem;
 }
-.site-footer p{ margin:0; }
+.site-footer .footer-meta{
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: .78;
+}
+
+.site-footer .footer-org{
+  color: rgba(255,255,255,.90);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+
+.site-footer .footer-org:hover{
+  border-bottom-color: rgba(255,255,255,.55);
+}
+
 
 /* =========================
    ACCESSIBILITY
@@ -623,6 +638,9 @@ main .contact{
 
   .deliver-card{
     padding: 22px;
+  }
+  .deliver-grid{
+    grid-template-columns: 1fr;
   }
 
   .case-card{
