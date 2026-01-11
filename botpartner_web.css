@@ -247,15 +247,16 @@ main .contact{
   gap:14px;
   margin-top:18px;
 }
-.main card{
+.grid-2 .card{
   background:#fff;
   border:1px solid rgba(0,0,0,.08);
   border-radius:16px;
   padding:18px;
   box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
-.main card h3{ margin:0 0 6px; color:var(--brand); }
-.main card p{ margin:0; color:#374151; line-height:1.65; }
+.grid-2 .card h3{ margin:0 0 6px; color:var(--brand); }
+.grid-2 .card p{ margin:0; color:#374151; line-height:1.65; }
+
 
 /* =========================
    DELIVER
