@@ -67,6 +67,12 @@ main{ flex:1 0 auto; }
 
 .nav-logo img{ height:40px; width:auto; display:block; }
 
+img, svg{
+  max-width: 100%;
+  height: auto;
+}
+
+
 .nav-links{
   display:flex;
   align-items:center;
@@ -623,8 +629,20 @@ main .contact{
     padding: 16px;
   }
 
-  .case-right{
+   .case .case-right,
+  #case .case-right,
+  main .case-right{
+    min-width: 0;
+    width: 100%;
     grid-template-columns: 1fr;
+  }
+
+  .case-card{
+    overflow: hidden;
+  }
+
+  .case-card > *{
+    min-width: 0;
   }
 
   .site-footer{
