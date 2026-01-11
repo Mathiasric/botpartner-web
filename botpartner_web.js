@@ -1,73 +1,50 @@
-// ✅ Fjern hash fra URL hvis siden lastes med #anker
-if (window.location.hash) {
-  history.replaceState(null, null, window.location.pathname);
-}
+// ✅ Mobilmeny (elite) – backdrop + scroll lock + ESC + lukk på link
+(() => {
+  const btn = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+  const backdrop = document.getElementById("navBackdrop");
 
-// ✅ Chatbot toggle (hvis brukt)
-const toggle = document.getElementById("chatToggle");
-const widget = document.getElementById("chatWidget");
+  if (!btn || !links || !backdrop) return;
 
-if (toggle && widget) {
-  toggle.addEventListener("click", () => {
-    widget.style.display = widget.style.display === "none" ? "block" : "none";
-  });
-}
+  const openMenu = () => {
+    links.classList.add("open");
+    backdrop.hidden = false;
+    requestAnimationFrame(() => backdrop.classList.add("show"));
+    btn.setAttribute("aria-expanded", "true");
+    document.body.classList.add("nav-lock");
+  };
 
-// ✅ Fade-in på seksjoner
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in-visible");
-      }
-    });
-  }, { threshold: 0.1 });
+  const closeMenu = () => {
+    links.classList.remove("open");
+    backdrop.classList.remove("show");
+    btn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-lock");
+    setTimeout(() => (backdrop.hidden = true), 180);
+  };
 
-  document.querySelectorAll("section").forEach(section => {
-    observer.observe(section);
-  });
+  const toggleMenu = () => {
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    isOpen ? closeMenu() : openMenu();
+  };
 
-  // ✅ Scroll til "hvordan"
-  const scrollHvordan = document.getElementById("scrollToHvordan");
-  const sectionHvordan = document.getElementById("hvordan");
+  btn.addEventListener("click", toggleMenu);
+  backdrop.addEventListener("click", closeMenu);
 
-  if (scrollHvordan && sectionHvordan) {
-    scrollHvordan.addEventListener("click", (e) => {
-      e.preventDefault();
-      sectionHvordan.scrollIntoView({ behavior: "smooth" });
-    });
-  }
-
-  // ✅ Scroll til "kontakt"
-  const scrollKontakt = document.getElementById("scrollToKontakt");
-  const sectionKontakt = document.getElementById("kontakt");
-
-  if (scrollKontakt && sectionKontakt) {
-    scrollKontakt.addEventListener("click", (e) => {
-      e.preventDefault();
-      sectionKontakt.scrollIntoView({ behavior: "smooth" });
-    });
-  }
-});
-
-
-
-// ✅ Mobilmeny
-// ✅ Mobilmeny
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  // Lukk når man klikker en link i menyen
+  links.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (a) closeMenu();
   });
 
-  navLinks.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+  // ESC lukker
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
   });
-}
+
+  // Hvis man resizer til desktop: reset
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeMenu();
+  });
+})();
+
 
