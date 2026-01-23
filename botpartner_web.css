@@ -530,6 +530,13 @@ main .contact{
   margin-left: auto;
   margin-right: auto;
 }
+.hero-actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
 
 /* =========================
