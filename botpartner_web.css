@@ -531,20 +531,180 @@ main .contact{
   margin-right: auto;
 }
 
-/* Desktop: lås demo-layout så høyresiden aldri blir bredere enn screenshot */
-@media (min-width: 901px){
+
+/* =========================
+   LØSNINGER — MOBILE PACK (scoped)
+   Krever: <body class="page-losninger">
+   Lim nederst i CSS
+========================= */
+
+/* Tablet + mobil */
+@media (max-width: 900px){
+
+  /* Litt mer plass nederst så chat-bobla ikke ligger oppå CTA/innhold */
+  .page-losninger main{
+    padding-bottom: 96px;
+  }
+
+  /* Seksjoner: litt strammere på mobil */
+  .page-losninger main .section{
+    margin: 44px auto;
+    width: 92%;
+    padding: 0 10px;
+  }
+
+  /* ===== DEMO =====
+     Sørg for at demo-kortet faktisk bruker GRID (ikke flex),
+     og stack alt pent på mobil.
+  */
   .page-losninger #demo .case-card{
-    grid-template-columns: 1fr 520px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .page-losninger #demo .case-actions{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .page-losninger #demo .case-actions a{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Demo media: ikke absolutt/overlapp på mobil */
+  .page-losninger #demo .demo-media{
+    position: static;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Skjul desktop-shot på mobil og vis mobil-shot kontrollert */
+  .page-losninger #demo .demo-desktop{
+    display: none;
+  }
+
+  .page-losninger #demo .demo-mobile{
+    position: static;
+    width: min(360px, 100%);
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  /* Overstyr “width:auto” regelen i demo på mobil så bildet oppfører seg responsivt */
+  .page-losninger #demo img{
+    width: 100% !important;
+    height: auto !important;
+    max-width: 360px !important;
+    max-height: none !important;
+    object-fit: contain;
+  }
+
+  /* Chips: litt mindre på mobil */
+  .page-losninger .chips{
+    gap: 8px;
+    margin: 12px 0 14px;
+  }
+  .page-losninger .chip{
+    font-size: .85rem;
+    padding: 7px 10px;
+  }
+
+  /* ===== BRUKSOMRÅDER / LEVERANSE / BRANSJE (deliver-grid) ===== */
+  .page-losninger .deliver-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .page-losninger .deliver-card{
+    padding: 18px;
+  }
+
+  /* Hindre “smale tårn” / rare ordbrudd */
+  .page-losninger .deliver-card h3,
+  .page-losninger .grid-2 .card h3{
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    text-wrap: balance;
+  }
+
+  .page-losninger .deliver-card p,
+  .page-losninger .grid-2 .card p{
+    line-height: 1.55;
+  }
+
+  /* ===== Grid-2 (kortseksjoner) ===== */
+  .page-losninger .grid-2{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .page-losninger .grid-2 .card{
+    padding: 18px;
+  }
+
+  /* CTA i kontakt/leveranse: rydd på mobil */
+  .page-losninger .contact-actions{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .page-losninger .contact-actions a{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hvis du fortsatt vil skjule outline-knappen på mobil */
+  .page-losninger .contact-actions .btn-outline{
+    display: none;
   }
 }
 
-/* Mobil: la bildene være responsive, men fortsatt kontrollerte */
-@media (max-width: 900px){
-  .page-losninger #demo img{
-    max-width: 100% !important;
-    max-height: 360px !important;
+/* Små mobiler */
+@media (max-width: 520px){
+
+  .page-losninger header.hero{
+    padding: 2.1rem 1rem 2rem;
+  }
+
+  .page-losninger .hero-title{
+    font-size: 1.75rem;
+    line-height: 1.12;
+  }
+
+  .page-losninger .hero-actions{
+    gap: 10px;
+  }
+
+  .page-losninger .hero-actions .cta-button,
+  .page-losninger .hero-actions .btn-outline{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Litt strammere kort */
+  .page-losninger .deliver-card,
+  .page-losninger .grid-2 .card{
+    border-radius: 16px;
   }
 }
+
+/* Desktop: lås demo-layout riktig (hvis du vil ha 2 kolonner der) */
+@media (min-width: 901px){
+  .page-losninger #demo .case-card{
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    align-items: center;
+  }
+}
+
 
 
 /* =========================
