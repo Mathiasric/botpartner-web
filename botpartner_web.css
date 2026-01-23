@@ -239,6 +239,10 @@ main .contact{
   max-width:740px;
   margin-top:10px;
 }
+.nav-links a.is-active{
+  font-weight:600;
+  opacity:1;
+}
 
 /* cards (brukes i "For / Ikke for") */
 .grid-2{
@@ -456,6 +460,90 @@ main .contact{
 
 .site-footer .footer-org:hover{
   border-bottom-color: rgba(255,255,255,.55);
+}
+
+/* =========================
+   LØSNINGER — additions only (scoped)
+   Krever: <body class="page-losninger">
+========================= */
+
+/* NAV: marker aktiv side (aria-current) */
+.page-losninger .nav-links a[aria-current="page"]{
+  position: relative;
+  font-weight: 800;
+}
+.page-losninger .nav-links a[aria-current="page"]::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-10px;
+  height:2px;
+  border-radius:999px;
+  background: rgba(255,126,71,.95);
+}
+
+/* HERO: outline-knapp som "ghost" på mørk bakgrunn */
+.page-losninger .hero .btn-outline{
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  border-color: rgba(255,255,255,.32);
+}
+.page-losninger .hero .btn-outline:hover{
+  border-color: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.06);
+}
+
+/* Hero sekundær tagline (du bruker denne klassen i HTML) */
+.page-losninger .hero-tagline-secondary{
+  margin-top: .15rem;
+  opacity: .92;
+}
+
+/* DEMO: hold screenshots under kontroll (uten å påvirke andre bilder på siden) */
+.page-losninger #demo .case-right{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* Overstyr evt. global img { width:100% } kun i demo-seksjonen */
+.page-losninger #demo img{
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 520px !important;
+  max-height: 420px !important;
+
+  object-fit: contain;
+  display:block;
+
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  background:#fff;
+}
+
+/* Demo-kortet litt mer "produkt" på store skjermer */
+.page-losninger #demo .case-card{
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop: lås demo-layout så høyresiden aldri blir bredere enn screenshot */
+@media (min-width: 901px){
+  .page-losninger #demo .case-card{
+    grid-template-columns: 1fr 520px;
+  }
+}
+
+/* Mobil: la bildene være responsive, men fortsatt kontrollerte */
+@media (max-width: 900px){
+  .page-losninger #demo img{
+    max-width: 100% !important;
+    max-height: 360px !important;
+  }
 }
 
 
