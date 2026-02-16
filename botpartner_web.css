@@ -1313,10 +1313,19 @@ body.nav-lock{
   overflow: hidden;
 }
 
+#gjennomgang{
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+#gjennomgang + .section{
+  padding-top: 24px;
+}
+
 /* Lead form */
 .review-form{
   max-width: 640px;
-  margin: 32px auto 0;
+  margin: 32px 0 0;
   display: flex;
   flex-direction: column;
   gap: 18px;

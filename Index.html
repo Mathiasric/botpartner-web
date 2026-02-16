@@ -78,8 +78,7 @@
   <a href="system.html">System</a>
   <a href="#case">Case</a>
   <a href="#faq">FAQ</a>
-  <a href="#kontakt">Kontakt</a>
-  <a class="nav-cta" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">Book gjennomgang</a>
+  <a class="nav-cta" href="#gjennomgang">Book gjennomgang</a>
 </div>
 </nav>
 <div class="nav-backdrop" id="navBackdrop" hidden></div>
@@ -100,7 +99,7 @@
 
 
   <div class="hero-actions">
-  <a class="cta-button" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">Book strategimøte</a>
+  <a class="cta-button" href="#gjennomgang">Book gjennomgang</a>
   <a class="btn-outline" href="#case">Se i produksjon →</a>
 </div>
 
@@ -312,17 +311,73 @@ Vi tilbyr drift, vedlikehold og videreutvikling av AI-løsninger og nettsider me
     </details>
   </section>
 
-  <!-- 7) KONTAKT -->
-  <section class="section contact" id="kontakt">
-    <h2>Ta kontakt</h2>
-    <p class="lead">
-      Vi tar inn et begrenset antall prosjekter og jobber tett med kundene våre.
-    </p>
+  <!-- 7) BE OM GJENNOMGANG -->
+    <section class="section" id="gjennomgang">
+      <h2>Book gjennomgang</h2>
+      <p class="lead">Vi vurderer nettside + AI-assistent + integrasjoner — og sender deg et konkret forslag innen 24 timer.</p>
 
-    <div class="contact-actions">
-      <a class="cta-button" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">Book strategimøte</a>
-      <a class="btn-outline" href="mailto:hei@botpartner.no?subject=Kontakt%20-%20Botpartner">Kontakt oss</a>
-    </div>
+      <form class="review-form" id="leadForm" novalidate>
+        <div class="form-row">
+          <label>
+            Navn *
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Bedrift *
+            <input type="text" name="company" required>
+          </label>
+        </div>
+
+        <label>
+          E-post *
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Hva ønsker du hjelp med *
+          <select name="need" required>
+            <option value="" disabled selected>Velg alternativ</option>
+            <option value="Nettside som konverterer">Nettside som konverterer</option>
+            <option value="AI-assistent på nettsiden">AI-assistent på nettsiden</option>
+            <option value="Begge (nettside + assistent)">Begge (nettside + assistent)</option>
+            <option value="Usikker – trenger vurdering">Usikker – trenger vurdering</option>
+          </select>
+        </label>
+
+        <label>
+          Hovedmål *
+          <select name="goal" required>
+            <option value="" disabled selected>Velg mål</option>
+            <option value="Flere henvendelser / leads">Flere henvendelser / leads</option>
+            <option value="Flere bookings / timebestillinger">Flere bookings / timebestillinger</option>
+            <option value="Bedre konvertering på nettsiden">Bedre konvertering på nettsiden</option>
+            <option value="Avlaste support">Avlaste support</option>
+            <option value="Kvalifisere henvendelser før kontakt">Kvalifisere henvendelser før kontakt</option>
+            <option value="Integrere mot systemer">Integrere mot systemer</option>
+            <option value="Annet">Annet</option>
+          </select>
+        </label>
+
+        <label>
+          Systemer dere bruker (valgfritt)
+          <input type="text" name="systems" placeholder="Booking/kalender, CRM, support, betaling, annet…">
+        </label>
+
+        <label>
+          Melding
+          <textarea name="message" rows="3" placeholder="Noe annet vi bør vite?"></textarea>
+        </label>
+
+        <button type="submit" class="cta-button">Send forespørsel</button>
+        <p class="form-msg form-msg--success" id="formSuccess" hidden>Takk! Vi tar kontakt innen 24 timer.</p>
+        <p class="form-msg form-msg--error" id="formError" hidden>Noe gikk galt. Prøv igjen eller send e-post til hei@botpartner.no.</p>
+      </form>
+    </section>
+
+  <!-- 8) KONTAKTINFO -->
+  <section class="section" id="kontakt">
+    <h2>Kontaktinfo</h2>
+    <p class="lead">Vi svarer innen 24 timer på hverdager. Hvis det haster, ring oss.</p>
 
     <div class="contact-lines">
       <div class="mini-stat"><span>E-post</span><strong>hei@botpartner.no</strong></div>
