@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Systemet | Botpartner</title>
+  <meta name="description" content="Slik fungerer systemet bak nettside + AI-assistent: integrasjoner, logging, kontroll og drift – levert og driftet av Botpartner." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.botpartner.no/system.html" />
+
+  <meta property="og:title" content="Systemet | Botpartner" />
+  <meta property="og:description" content="Integrasjoner, logging, kontroll og drift – slik fungerer systemet bak nettside + AI-assistent." />
+  <meta property="og:image" content="https://botpartner.no/preview.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Ikoner -->
+  <link rel="icon" href="favicon-v2.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-v2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-v2.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192-v2.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512-v2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-botpartner.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="botpartner_web.css" />
+  <script defer src="botpartner_web.js"></script>
+</head>
+
+<body class="page-losninger">
+
+  <nav class="nav">
+    <a class="nav-logo" href="index.html#top" aria-label="Botpartner">
+      <img src="BP_icon_hvit.svg" alt="Botpartner" />
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="losninger.html">Løsninger</a>
+      <a href="system.html" aria-current="page">System</a>
+      <a href="index.html#case">Case</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a class="nav-cta" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">Book strategimøte</a>
+    </div>
+  </nav>
+
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <p class="hero-eyebrow">SYSTEM · INTEGRASJONER · LOGGING · KONTROLL · DRIFT</p>
+    <h1 class="hero-title">Systemet bak nettside + AI-assistent</h1>
+    <p class="hero-tagline">
+      En kontrollert digital frontlinje: nettside som konverterer, assistent som avlaster, integrasjoner som sender videre – og drift som forbedrer over tid.
+    </p>
+
+    <div class="hero-actions">
+      <a class="cta-button" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">
+        Book strategimøte
+      </a>
+      <a class="btn-outline" href="index.html#case">Se i produksjon →</a>
+    </div>
+
+    <a class="hero-secondary-link" href="https://klinikkassistenten.netlify.app/" target="_blank" rel="noopener noreferrer">Test AI-demo →</a>
+  </header>
+
+  <main>
+
+    <!-- 1) HVA SYSTEMET GJØR -->
+    <section class="deliver" id="outcomes">
+      <h2>Hva systemet gjør</h2>
+      <p class="lead">Tre konkrete utfall – ikke features.</p>
+
+      <div class="deliver-grid">
+        <article class="deliver-card is-featured">
+          <h3>Øker booking</h3>
+          <p>Leder besøkende til riktig handling: riktig skjema, riktig tjeneste, riktig tidspunkt. Uten friksjon.</p>
+          <div class="chips">
+            <span class="chip">Handoff</span>
+            <span class="chip">CTA-flyt</span>
+            <span class="chip">Booking</span>
+          </div>
+        </article>
+
+        <article class="deliver-card">
+          <h3>Reduserer support</h3>
+          <p>Tar repetisjonsspørsmål med kontrollerte svar. Åpningstider, priser, prosesser – uten å belaste teamet.</p>
+          <div class="chips">
+            <span class="chip">Kontrollerte svar</span>
+            <span class="chip">Kunnskapsbase</span>
+            <span class="chip">Avlastning</span>
+          </div>
+        </article>
+
+        <article class="deliver-card">
+          <h3>Kvalifiserer henvendelser</h3>
+          <p>Samler kontekst før kontakt: hva trenger kunden, hvilken tjeneste, hvor mye haster det. Bedre leads inn.</p>
+          <div class="chips">
+            <span class="chip">Kvalifisering</span>
+            <span class="chip">Kontekst</span>
+            <span class="chip">Leads</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2) HVORDAN DET FUNGERER -->
+    <section class="section" id="arkitektur">
+      <h2>Hvordan det fungerer</h2>
+      <p class="lead">Fra trafikk til forbedring – hele flyten i ett system.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Trafikk → Nettside</h3>
+            <p>Besøkende lander på en side bygget for konvertering. Strukturert innhold, tydelig CTA, rask lasting.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Nettside → AI-assistent</h3>
+            <p>Assistenten svarer på spørsmål, veileder og leder til handling – basert på kunnskapsbase og regler.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Assistent → Handoff</h3>
+            <p>Når brukeren er klar: booking, kontaktskjema, telefon eller kvalifisert henvendelse. Ingen blindvei.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Handoff → Systemer</h3>
+            <p>Kobles mot booking-system, kalender, CRM eller e-post – avhengig av scope og behov.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">5</div>
+          <div>
+            <h3>Logging → Forbedring</h3>
+            <p>Alle interaksjoner logges strukturert. Vi analyserer hull, forbedrer innhold og justerer flyt over tid.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) INTEGRASJONER & HANDOFF -->
+    <section class="section" id="integrasjoner">
+      <h2>Integrasjoner og handoff</h2>
+      <p class="lead">Ikke chat for chat. Assistenten kobles til handling.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Booking-system</h3>
+          <p>Assistenten leder til riktig tjeneste og sender brukeren videre til booking – direkte, uten omveier.</p>
+        </div>
+
+        <div class="card">
+          <h3>Kontakt / e-postskjema</h3>
+          <p>Kvalifisert henvendelse med kontekst: hva kunden trenger, hvilken tjeneste, og eventuell tidspreferanse.</p>
+        </div>
+
+        <div class="card">
+          <h3>CRM / pipeline</h3>
+          <p>Henvendelser kan sendes til CRM eller pipeline for oppfølging. Settes opp etter behov.</p>
+        </div>
+
+        <div class="card">
+          <h3>Kalender / timeforespørsel</h3>
+          <p>Kobling mot kalenderverktøy for direkte timeforespørsel eller tilgjengelighetssjekk.</p>
+        </div>
+      </div>
+
+      <p class="deliver-note">Integrasjoner settes opp etter behov og scope. Vi avklarer hva som gir mening før bygging.</p>
+    </section>
+
+    <!-- 4) KONTROLL OG KVALITET -->
+    <section class="section" id="kontroll">
+      <h2>Kontroll og kvalitet</h2>
+      <p class="lead">Assistenten gjetter ikke. Den følger regler.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Kun verifisert innhold</h3>
+          <p>Svarer kun på det som finnes i kunnskapsbasen. Ingen gjetting, ingen hallusinering.</p>
+        </div>
+
+        <div class="card">
+          <h3>Eskalering ved usikkerhet</h3>
+          <p>Når assistenten ikke vet svaret, sier den det – og leder til kontakt eller booking i stedet.</p>
+        </div>
+
+        <div class="card">
+          <h3>Sensitive tema</h3>
+          <p>Streng håndtering av helse, juss og andre sensitive områder. Ingen råd – kun verifisert informasjon og viderekobling.</p>
+        </div>
+
+        <div class="card">
+          <h3>Guardrails og grenser</h3>
+          <p>Klare regler for tone, innhold, formuleringer og hva assistenten ikke skal svare på.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) LOGGING OG FORBEDRING -->
+    <section class="section" id="logging">
+      <h2>Logging og forbedring</h2>
+      <p class="lead">Systemet lærer ikke av seg selv – vi forbedrer det basert på data.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Hva logges</h3>
+          <p>Spørsmål, svar, klikk, språk, side og tidspunkt. Strukturert i regneark for enkel tilgang og analyse.</p>
+        </div>
+
+        <div class="card">
+          <h3>Hvordan det brukes</h3>
+          <p>Vi finner hull i innhold, forbedrer flyt, justerer tone og øker konvertering basert på ekte brukerdata.</p>
+        </div>
+
+        <div class="card">
+          <h3>Personvern</h3>
+          <p>Assistenten ber ikke om sensitive personopplysninger. Logging kan anonymiseres eller slås av. Data slettes på forespørsel.</p>
+        </div>
+
+        <div class="card">
+          <h3>Forbedring over tid</h3>
+          <p>Ikke en engangsleveranse. Systemet blir bedre for hver uke det er i drift – fordi vi aktivt forbedrer det.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) DRIFT = MODELLEN -->
+    <section class="section" id="drift">
+      <h2>Drift er det som gjør systemet bedre over tid</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">→</div>
+          <div>
+            <h3>Kvalitet må vedlikeholdes</h3>
+            <p>Uten oppfølging faller presisjon og konvertering over tid. Vi holder det riktig.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">→</div>
+          <div>
+            <h3>Kontinuerlige forbedringer</h3>
+            <p>Vi oppdaterer innhold, finjusterer flyt og fikser feil basert på logging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) SLUTT-CTA -->
+    <section class="section contact" id="cta">
+      <h2>Klar for en kontrollert digital frontlinje?</h2>
+      <p class="lead">Vi avklarer scope raskt: hva som skal automatiseres, hva som ikke skal automatiseres, og hvilke systemer som skal kobles på.</p>
+
+      <div class="contact-actions">
+        <a class="cta-button" href="mailto:hei@botpartner.no?subject=Strategim%C3%B8te%20-%20Botpartner&body=Hei%2C%0A%0AVi%20%C3%B8nsker%20et%20strategim%C3%B8te.%20Bransje%3A%20%0AM%C3%A5l%3A%20(bookings%2Fsupport%2Fleads)%0ASystemer%3A%20(booking%2FCRM)%0A%0A">Book strategimøte</a>
+        <a class="btn-outline" href="index.html#case">Se i produksjon →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <strong class="footer-logo">Botpartner</strong>
+        <p>Kontrollerte AI-assistenter i drift.</p>
+      </div>
+
+      <div class="footer-col">
+        <strong>Kontakt</strong>
+        <p><a href="mailto:hei@botpartner.no">hei@botpartner.no</a></p>
+        <p><a href="tel:+4741629927">+47 416 29 927</a></p>
+      </div>
+
+      <div class="footer-col">
+        <strong>Sider</strong>
+        <p><a href="index.html#leveranse">Leveranse</a></p>
+        <p><a href="index.html#case">Case</a></p>
+        <p><a href="losninger.html">Løsninger</a></p>
+        <p><a href="system.html">System</a></p>
+        <p><a href="index.html#faq">FAQ</a></p>
+      </div>
+
+      <div class="footer-col">
+        <strong>Selskap</strong>
+        <p>Org.nr 936 933 149</p>
+        <p>© 2026 Botpartner</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://botpartner-chatbot.netlify.app/embed.js"></script>
+</body>
+</html>

@@ -1,9 +1,11 @@
-// Nav: transparent over hero, solid when scrolled
+// Nav: transparent on hero, solid with dark text after scroll
 (() => {
   const nav = document.querySelector('.nav');
+  const hero = document.querySelector('.hero');
   if (!nav) return;
+  const threshold = hero ? Math.max(80, hero.offsetHeight - 120) : 80;
   const update = () => {
-    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    nav.classList.toggle('is-solid', window.scrollY > threshold);
   };
   window.addEventListener('scroll', update, { passive: true });
   update();
