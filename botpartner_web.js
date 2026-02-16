@@ -84,3 +84,48 @@
   window.addEventListener("resize", onScroll);
   onScroll();
 })();
+
+// Lead-skjema – send til Netlify function
+(() => {
+  const form = document.getElementById("leadForm");
+  if (!form) return;
+
+  const success = document.getElementById("formSuccess");
+  const error = document.getElementById("formError");
+  const btn = form.querySelector('button[type="submit"]');
+  const btnText = btn.textContent;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    success.hidden = true;
+    error.hidden = true;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sender…";
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch("/.netlify/functions/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error();
+
+      form.reset();
+      success.hidden = false;
+    } catch {
+      error.hidden = false;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = btnText;
+    }
+  });
+})();

@@ -266,7 +266,61 @@
       </div>
     </section>
 
-    <!-- 7) SLUTT-CTA -->
+    <!-- 7) BE OM GJENNOMGANG -->
+    <section class="section" id="gjennomgang">
+      <h2>Be om gjennomgang</h2>
+      <p class="lead">Vi vurderer om en AI-assistent passer for din bedrift — og gir deg et konkret forslag innen 48 timer.</p>
+
+      <form class="review-form" id="leadForm" novalidate>
+        <div class="form-row">
+          <label>
+            Navn *
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Bedrift *
+            <input type="text" name="company" required>
+          </label>
+        </div>
+
+        <label>
+          E-post *
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Hovedmål *
+          <select name="goal" required>
+            <option value="" disabled selected>Velg mål</option>
+            <option value="Øke booking">Øke booking</option>
+            <option value="Redusere support">Redusere support</option>
+            <option value="Kvalifisere leads">Kvalifisere leads</option>
+          </select>
+        </label>
+
+        <div class="form-row">
+          <label>
+            Systemer i bruk
+            <input type="text" name="systems" placeholder="F.eks. Planyo, HubSpot, Zendesk">
+          </label>
+          <label>
+            Månedlig trafikk
+            <input type="text" name="traffic" placeholder="F.eks. 5 000 besøk/mnd">
+          </label>
+        </div>
+
+        <label>
+          Melding
+          <textarea name="message" rows="3" placeholder="Noe annet vi bør vite?"></textarea>
+        </label>
+
+        <button type="submit" class="cta-button">Send forespørsel</button>
+        <p class="form-msg form-msg--success" id="formSuccess" hidden>Takk! Vi tar kontakt innen 48 timer.</p>
+        <p class="form-msg form-msg--error" id="formError" hidden>Noe gikk galt. Prøv igjen eller send e-post til hei@botpartner.no.</p>
+      </form>
+    </section>
+
+    <!-- 8) SLUTT-CTA -->
     <section class="section contact" id="cta">
       <h2>Klar for en kontrollert digital frontlinje?</h2>
       <p class="lead">Vi avklarer scope raskt: hva som skal automatiseres, hva som ikke skal automatiseres, og hvilke systemer som skal kobles på.</p>

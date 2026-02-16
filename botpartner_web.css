@@ -1312,3 +1312,81 @@ main .contact{
 body.nav-lock{
   overflow: hidden;
 }
+
+/* Lead form */
+.review-form{
+  max-width: 640px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.review-form label{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea{
+  font-family: inherit;
+  font-size: .95rem;
+  font-weight: 400;
+  padding: 10px 14px;
+  border: 1px solid rgba(15,23,42,.15);
+  border-radius: 12px;
+  background: #fff;
+  color: #111827;
+  transition: border-color .15s;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus{
+  outline: none;
+  border-color: var(--cta);
+}
+
+.review-form textarea{
+  resize: vertical;
+}
+
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 600px){
+  .form-row{
+    grid-template-columns: 1fr;
+  }
+}
+
+.review-form .cta-button{
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.review-form .cta-button:disabled{
+  opacity: .6;
+  cursor: wait;
+}
+
+.form-msg{
+  font-size: .92rem;
+  margin: 0;
+}
+
+.form-msg--success{
+  color: #16a34a;
+}
+
+.form-msg--error{
+  color: #dc2626;
+}
