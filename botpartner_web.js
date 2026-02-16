@@ -61,3 +61,26 @@
 })();
 
 
+
+(function () {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+
+  const hero = document.querySelector(".hero");
+  const fallback = 80;
+
+  function getThreshold() {
+    if (!hero) return fallback;
+    // Bytt til solid litt før hero "slutter"
+    return Math.max(fallback, hero.offsetHeight - 120);
+  }
+
+  function onScroll() {
+    const threshold = getThreshold();
+    nav.classList.toggle("is-solid", window.scrollY > threshold);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+})();
