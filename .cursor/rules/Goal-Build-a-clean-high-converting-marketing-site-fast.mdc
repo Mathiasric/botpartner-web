@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+---
+
+Workflow:
+- Propose 2–3 layout options max, then implement one. No long explanations.
+- Always ship in small, testable increments (one section/component at a time).
+
+Design system:
+- Use a simple system: max 2 fonts, max 2 button styles, consistent spacing scale.
+- Keep copy short. One primary CTA per page/section.
+
+Responsive:
+- Design mobile-first, then add one tablet breakpoint (~768px) and desktop.
+- Avoid hover-dependent UI. Touch-friendly sizes.
+
+Quality:
+- Prefer simple HTML/CSS/vanilla JS. No new frameworks or dependencies.
+- Do not refactor unrelated code. Minimal diffs.
+
+Brand constraint:
+- Keep existing "botpartner.no" class conventions intact (do not remove/rename).

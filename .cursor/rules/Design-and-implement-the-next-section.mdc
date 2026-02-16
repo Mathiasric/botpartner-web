@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+- Give 2 layout variants (very short), pick the best, then implement.
+- Keep it consistent with existing styles.
+- Mobile-first, then tablet and desktop.
+- Minimal code, no refactor, no new deps.

@@ -1,4 +1,15 @@
-// ✅ Mobilmeny (elite) – backdrop + scroll lock + ESC + lukk på link
+// Nav: transparent over hero, solid when scrolled
+(() => {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  const update = () => {
+    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// Mobilmeny – backdrop + scroll lock + ESC + lukk på link
 (() => {
   const btn = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
