@@ -94,16 +94,17 @@ img, svg{
 .nav-links a:hover{ opacity:.65; }
 
 .nav-cta{
-  background: rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.18);
+  background: var(--cta);
+  border:1px solid transparent;
   color:#fff;
   padding:10px 12px;
   border-radius:10px;
+  box-shadow: 0 2px 8px rgba(255,126,71,.18);
   box-shadow:none;
   transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 .nav-cta:hover{
-  background: rgba(255,255,255,.20);
+  background: var(--cta-600);
 }
 
 .nav-toggle{
