@@ -1,13 +1,4 @@
-// Nav: transparent on hero, dark bg after scroll
-(() => {
-  const nav = document.querySelector('.nav');
-  if (!nav) return;
-  const update = () => {
-    nav.classList.toggle('is-scrolled', window.scrollY > 40);
-  };
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
+// Nav: permanent dark glass (no scroll-based switching)
 
 // Mobilmeny – backdrop + scroll lock + ESC + lukk på link
 (() => {

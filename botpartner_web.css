@@ -63,44 +63,11 @@ main{
   gap:14px;
   padding:12px 18px;
 
-  background: transparent;
-  backdrop-filter: blur(0px);
-  border-bottom:1px solid transparent;
-  box-shadow:none;
-  transition: background .3s ease, backdrop-filter .3s ease, border-color .3s ease, box-shadow .3s ease;
-}
-
-/* Solid state: light bg + dark text for scrolling over content */
-.nav.is-scrolled{
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(15,23,42,.08);
-  box-shadow: 0 2px 12px rgba(15,23,42,.06);
-  transition: background .25s, box-shadow .25s;
-}
-
-.nav.is-scrolled .nav-links a{
-  color: #0f172a;
-}
-.nav.is-scrolled .nav-links a:hover{
-  opacity: .55;
-}
-
-.nav.is-scrolled .nav-cta{
-  background: var(--cta);
-  color: #fff;
-  border-color: var(--cta);
-}
-.nav.is-scrolled .nav-cta:hover{
-  background: var(--cta-600);
-}
-
-.nav.is-scrolled .nav-toggle{
-  border-color: rgba(15,23,42,.14);
-  background: rgba(15,23,42,.04);
-}
-.nav.is-scrolled .nav-toggle span{
-  background: #0f172a;
+  background: rgba(16,23,42,.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  box-shadow: 0 2px 12px rgba(15,23,42,.12);
 }
 
 .nav-logo img{ height:40px; width:auto; display:block; }
@@ -953,13 +920,6 @@ main .contact{
     transition: border-color .3s ease, background .3s ease;
   }
 
-  .nav.is-scrolled .nav-toggle{
-    border-color: rgba(15,23,42,.14);
-    background: rgba(15,23,42,.04);
-  }
-  .nav.is-scrolled .nav-toggle span{
-    background: #0f172a;
-  }
 
   /* Backdrop bak menyen */
   .nav-backdrop{
