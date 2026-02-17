@@ -391,12 +391,12 @@ main #faq::after{
   margin-top:18px;
 }
 .grid-2 .card{
-  background:#fff;
-  border:1px solid rgba(15,23,42,.06);
+  background:#fafafa;
+  border:1px solid rgba(15,23,42,.05);
   border-top:2px solid rgba(255,126,71,.14);
   border-radius:12px;
   padding:24px;
-  box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 6px 20px rgba(15,23,42,.04);
+  box-shadow: 0 2px 4px rgba(15,23,42,.05), 0 8px 24px rgba(15,23,42,.05);
 }
 .grid-2 .card h3{ margin:0 0 8px; color:var(--brand); }
 .grid-2 .card p{ margin:0; color:#374151; line-height:1.6; }
@@ -414,12 +414,12 @@ main #faq::after{
 
 /* System card style */
 .deliver-card{
-  background:#fff;
-  border:1px solid rgba(15,23,42,.06);
+  background:#fafafa;
+  border:1px solid rgba(15,23,42,.05);
   border-top:2px solid rgba(67,199,195,.18);
   border-radius:12px;
   padding:26px;
-  box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 6px 20px rgba(15,23,42,.04);
+  box-shadow: 0 2px 4px rgba(15,23,42,.05), 0 8px 24px rgba(15,23,42,.05);
   position:relative;
 }
 .deliver-card.deliver-card--signal{
@@ -474,12 +474,12 @@ main #faq::after{
 ========================= */
 .case-card{
   margin-top:18px;
-  background:#fff;
-  border:1px solid rgba(15,23,42,.06);
+  background:#fafafa;
+  border:1px solid rgba(15,23,42,.05);
   border-top:2px solid rgba(67,199,195,.18);
   border-radius:12px;
   padding:26px;
-  box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 6px 20px rgba(15,23,42,.04);
+  box-shadow: 0 2px 4px rgba(15,23,42,.05), 0 8px 24px rgba(15,23,42,.05);
   display:flex;
   justify-content:space-between;
   gap:20px;
@@ -570,12 +570,12 @@ main #faq::after{
    FAQ
 ========================= */
 .faq-item{
-  border:1px solid rgba(15,23,42,.06);
-  background:#fff;
+  border:1px solid rgba(15,23,42,.05);
+  background:#fafafa;
   border-radius:12px;
   padding:1rem 1.25rem;
   margin:.75rem 0;
-  box-shadow: 0 1px 3px rgba(15,23,42,.04);
+  box-shadow: 0 2px 4px rgba(15,23,42,.05), 0 6px 16px rgba(15,23,42,.04);
 }
 .faq-item > summary{
   cursor:pointer;
