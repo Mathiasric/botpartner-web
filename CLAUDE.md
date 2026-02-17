@@ -1,81 +1,145 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Project Overview
-
-Botpartner marketing website — a static HTML/CSS/JS site with no build tools, frameworks, or package managers. Served directly as static files, deployed to Netlify.
-
-## Development
-
-- **Dev server:** VSCode Live Server on port 5502 (configured in `.vscode/settings.json`)
-- **No build step, no tests, no linter** — files are served as-is
-- **Single external dependency:** Google Fonts (Inter 400/600/700)
-- **Embedded widget:** Chat widget loaded from `botpartner-chatbot.netlify.app/embed.js`
-
-## Architecture
-
-**Pages:** `index.html` (landing), `losninger.html` (solutions), `system.html` (system architecture)
-
-**Styling:** Single monolithic CSS file `botpartner_web.css` (~1300 lines). CSS custom properties defined at top:
-- `--brand: #202942`, `--bg: #F5F7FA`, `--cta: #ff7e47`, `--muted: #6b7280`
-- Breakpoints: mobile (<600px), tablet (600–860px), desktop (>860px), very small (<380px)
-- Mobile-first responsive design
-
-**JavaScript:** `botpartner_web.js` (~87 lines) handles nav scroll effect (transparent→solid) and mobile hamburger menu with IIFE pattern.
-
-## Design Guidelines (from Cursor rules)
-
-- Mobile-first, then tablet/desktop
-- Max 2 fonts, 2 button styles, consistent spacing
-- No new frameworks or dependencies — keep it vanilla HTML/CSS/JS
-- Preserve existing class naming conventions
-- Keep copy short, one primary CTA per section
-- When adding sections: propose 2–3 layout variants, pick best, implement
-- No unnecessary refactoring of existing code
-
-## Conventions
-
-- Semantic HTML5 (`<header>`, `<main>`, `<footer>`, `<section>`, `<details>`)
-- BEM-inspired class names scoped per component (`.hero-*`, `.nav-*`, `.case-card`, `.deliver-card`)
-- Reusable layout classes: `.grid-2`, `.section`, `.lead`, `.card`
-- Button variants: `.cta-button`, `.btn-outline`
-- Images use `loading="lazy"`
-- Accessibility: ARIA attributes, `.visually-hidden`, keyboard nav (ESC to close menu)
-- Schema.org structured data and Open Graph meta tags for SEO
+This file defines execution rules for Claude Code in this repository.
 
 ---
 
-## Conversion & Positioning Rules
+# 1. Project Identity
 
-This is a high-ticket B2B marketing site.
-All changes should support clarity, authority and conversion.
+Botpartner.no is a high-ticket B2B qualification machine.
 
-- Do not redesign unless explicitly requested.
-- Do not introduce new visual styles without approval.
-- Keep sections structured and system-oriented.
-- Avoid generic AI buzzwords.
-- Prefer outcome-focused copy (booking, leads, reduced support).
+Core positioning:
+"Nettsider som konverterer – med AI som kvalifiserer henvendelser automatisk."
 
-Only one primary CTA per section.
+This is not an informational website.
+It exists to generate qualified B2B leads.
 
----
-
-## Token Discipline
-
-- Keep responses concise.
-- Do not restate obvious context.
-- When editing code, return only changed files or diffs.
-- Avoid long explanations unless explicitly requested.
-- Do not propose large refactors unless necessary.
+Every change must improve:
+- Clarity
+- Authority
+- Conversion
+- Structural simplicity
 
 ---
 
-## Scope Control
+# 2. Technical Constraints (Non-Negotiable)
+
+- Static HTML / CSS / Vanilla JS only
+- No frameworks
+- No build tools
+- No package manager
+- No refactoring unless explicitly requested
+- No renaming classes or IDs
+- No splitting CSS
+- No introducing new dependencies
+- No layout hierarchy changes unless explicitly requested
+- Preserve mobile behavior
+
+All edits must be minimal and scoped.
+
+---
+
+# 3. File Structure
+
+Pages:
+- index.html
+- losninger.html
+- system.html
+
+Styling:
+- botpartner_web.css (single monolithic file)
+
+JavaScript:
+- botpartner_web.js (navigation scroll + mobile menu only)
+
+---
+
+# 4. Conversion Rules
+
+This is a high-ticket B2B site.
+
+- One primary CTA per section.
+- CTA standard text: "Book gjennomgang"
+- All CTAs must link to the same form anchor.
+- Avoid AI buzzword inflation.
+- Focus on business outcomes:
+  - More qualified leads
+  - More booked meetings
+  - Less admin work
+  - Faster response
+
+Do not add decorative UI.
+Do not add visual experiments.
+Do not redesign.
+
+Only improve clarity and intent.
+
+---
+
+# 5. Execution Model (MANDATORY)
 
 When making changes:
-- List affected files first.
-- Do not rename CSS classes.
-- Do not change layout hierarchy unless asked.
-- Preserve mobile behavior.
-- Do not add frameworks or build tools.
+
+1. List affected files.
+2. Explain intent in 2–4 short bullet points.
+3. Return diffs only (no full file dumps).
+4. No commentary after diff unless requested.
+
+Never:
+
+- Rewrite entire sections unless asked.
+- Propose full redesigns.
+- Add new systems.
+- Modify CSS architecture.
+
+---
+
+# 6. SEO Discipline
+
+SEO is controlled and intentional.
+
+Allowed:
+- Title improvements
+- Meta description refinement
+- Canonical tags
+- Open Graph hygiene
+- Heading structure clarity (H1 → H2 → H3)
+
+Not allowed:
+- Adding keyword stuffing
+- Creating new pages without request
+- Expanding scope into blog/content marketing
+
+---
+
+# 7. Navbar Rules
+
+Navbar must remain:
+- Clean
+- Stable
+- Readable on all backgrounds
+- No animation experiments
+- No layered overlay hacks
+
+Keep implementation simple and robust.
+
+---
+
+# 8. Token Discipline
+
+- Be concise.
+- Avoid repetition.
+- No marketing fluff.
+- No long explanations.
+- Output should be production-ready.
+
+---
+
+# 9. Strategic Guardrail
+
+If a requested change weakens positioning,
+complicates structure,
+or introduces scope creep,
+
+Flag it before implementing.
+

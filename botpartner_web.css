@@ -71,34 +71,35 @@ main{
 }
 
 /* Solid state: light bg + dark text for scrolling over content */
-.nav.is-solid{
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(14px);
-  border-bottom:1px solid rgba(15,23,42,.08);
-  box-shadow: 0 4px 16px rgba(15,23,42,.06);
+.nav.is-scrolled{
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 2px 12px rgba(15,23,42,.06);
+  transition: background .25s, box-shadow .25s;
 }
 
-.nav.is-solid .nav-links a{
+.nav.is-scrolled .nav-links a{
   color: #0f172a;
 }
-.nav.is-solid .nav-links a:hover{
-  opacity:.55;
+.nav.is-scrolled .nav-links a:hover{
+  opacity: .55;
 }
 
-.nav.is-solid .nav-cta{
+.nav.is-scrolled .nav-cta{
   background: var(--cta);
   color: #fff;
   border-color: var(--cta);
 }
-.nav.is-solid .nav-cta:hover{
+.nav.is-scrolled .nav-cta:hover{
   background: var(--cta-600);
 }
 
-.nav.is-solid .nav-toggle{
+.nav.is-scrolled .nav-toggle{
   border-color: rgba(15,23,42,.14);
   background: rgba(15,23,42,.04);
 }
-.nav.is-solid .nav-toggle span{
+.nav.is-scrolled .nav-toggle span{
   background: #0f172a;
 }
 
@@ -182,35 +183,6 @@ header.hero{
   border-bottom:none;
   box-shadow:none;
 }
-
-/* Dark overlay – top readability + radial vignette for edge focus */
-header.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background:
-    radial-gradient(ellipse 70% 65% at 50% 45%, transparent 0%, rgba(15,23,42,.30) 100%),
-    linear-gradient(180deg,
-      rgba(15,23,42,.52) 0%,
-      rgba(15,23,42,.38) 30%,
-      rgba(15,23,42,.10) 70%,
-      rgba(15,23,42,.04) 100%
-    );
-}
-
-/* Subtle bottom vignette – no white, just atmospheric depth */
-header.hero::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height:80px;
-  z-index:0;
-  background: linear-gradient(to bottom, transparent, rgba(15,23,42,.25));
-}
-
-/* All hero content above overlays */
-header.hero > *{ position:relative; z-index:1; }
 
 .hero-eyebrow{
   margin:0 0 0.25rem;
@@ -968,11 +940,11 @@ main .contact{
     transition: border-color .3s ease, background .3s ease;
   }
 
-  .nav.is-solid .nav-toggle{
+  .nav.is-scrolled .nav-toggle{
     border-color: rgba(15,23,42,.14);
     background: rgba(15,23,42,.04);
   }
-  .nav.is-solid .nav-toggle span{
+  .nav.is-scrolled .nav-toggle span{
     background: #0f172a;
   }
 

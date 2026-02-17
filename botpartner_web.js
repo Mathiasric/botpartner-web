@@ -1,11 +1,9 @@
-// Nav: transparent on hero, solid with dark text after scroll
+// Nav: transparent on hero, dark bg after scroll
 (() => {
   const nav = document.querySelector('.nav');
-  const hero = document.querySelector('.hero');
   if (!nav) return;
-  const threshold = hero ? Math.max(80, hero.offsetHeight - 120) : 80;
   const update = () => {
-    nav.classList.toggle('is-solid', window.scrollY > threshold);
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
   };
   window.addEventListener('scroll', update, { passive: true });
   update();
@@ -62,28 +60,7 @@
 
 
 
-(function () {
-  const nav = document.querySelector(".nav");
-  if (!nav) return;
-
-  const hero = document.querySelector(".hero");
-  const fallback = 80;
-
-  function getThreshold() {
-    if (!hero) return fallback;
-    // Bytt til solid litt før hero "slutter"
-    return Math.max(fallback, hero.offsetHeight - 120);
-  }
-
-  function onScroll() {
-    const threshold = getThreshold();
-    nav.classList.toggle("is-solid", window.scrollY > threshold);
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  onScroll();
-})();
+// (scroll listener consolidated above)
 
 // Lead-skjema – send til Netlify function
 (() => {
