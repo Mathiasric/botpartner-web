@@ -100,11 +100,11 @@ img, svg{
   padding:10px 12px;
   border-radius:10px;
   box-shadow: 0 2px 8px rgba(255,126,71,.18);
-  box-shadow:none;
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
+  transition: background .3s ease, box-shadow .2s ease;
 }
 .nav-cta:hover{
   background: var(--cta-600);
+  box-shadow: 0 4px 14px rgba(255,126,71,.28);
 }
 
 .nav-toggle{
@@ -1359,4 +1359,19 @@ body.nav-lock{
 
 .form-msg--error{
   color: #dc2626;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    transition-duration:0.01ms !important;
+    animation-duration:0.01ms !important;
+  }
+  .grid-2 .card:hover,
+  .deliver-card:hover,
+  .case-card:hover{
+    transform:none !important;
+  }
 }
