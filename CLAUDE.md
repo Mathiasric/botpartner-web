@@ -143,3 +143,17 @@ or introduces scope creep,
 
 Flag it before implementing.
 
+# 11. Pre-Edit Verification (MANDATORY)
+
+Before writing any diff:
+
+- Confirm the exact existing HTML structure you are modifying.
+- Confirm the exact class names or IDs exist.
+- Do not assume structure.
+- If uncertain, search first.
+
+After writing diff:
+
+- Confirm no unintended selectors were touched.
+- Confirm mobile behavior is preserved.
+- Confirm CTA consistency remains intact.
