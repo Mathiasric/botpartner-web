@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://botpartner.no/sitemap.xml
+Sitemap: https://www.botpartner.no/sitemap.xml
