@@ -9,7 +9,8 @@ This file defines execution rules for Claude Code in this repository.
 Botpartner.no is a high-ticket B2B qualification machine.
 
 Core positioning:
-"Nettsider som konverterer – med AI som kvalifiserer henvendelser automatisk."
+Vi bygger strukturerte nettsider som konverterer.
+AI brukes der det styrker kvalifisering og flyt.
 
 This is not an informational website.
 It exists to generate qualified B2B leads.
@@ -45,6 +46,8 @@ Pages:
 - index.html
 - losninger.html
 - system.html
+- ai-assistent-nettside.html
+- nettside.html
 
 Styling:
 - botpartner_web.css (single monolithic file)
@@ -59,8 +62,11 @@ JavaScript:
 This is a high-ticket B2B site.
 
 - One primary CTA per section.
-- CTA standard text: "Book gjennomgang"
-- All CTAs must link to the same form anchor.
+- Primary CTA depends on page intent:
+  - Nettside flow: "Book gjennomgang"
+  - AI flow: "Book demo"
+- All CTAs must remain consistent within page context.
+- CTAs must link to the correct anchor or mail action for that flow.
 - Avoid AI buzzword inflation.
 - Focus on business outcomes:
   - More qualified leads
@@ -73,8 +79,6 @@ Do not add visual experiments.
 Do not redesign.
 
 Only improve clarity and intent.
-
----
 
 # 5. Execution Model (MANDATORY)
 
@@ -107,7 +111,7 @@ Allowed:
 
 Not allowed:
 - Adding keyword stuffing
-- Creating new pages without request
+- New pages may only be created when explicitly requested and strategically justified.
 - Expanding scope into blog/content marketing
 
 ---
@@ -142,6 +146,9 @@ complicates structure,
 or introduces scope creep,
 
 Flag it before implementing.
+
+Do not over-prioritize AI positioning
+when page intent is website-first.
 
 # 11. Pre-Edit Verification (MANDATORY)
 
