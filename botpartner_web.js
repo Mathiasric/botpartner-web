@@ -97,3 +97,33 @@
     }
   });
 })();
+
+// Fade-in on scroll – Intersection Observer
+(() => {
+  // Sjekk om browser støtter IntersectionObserver
+  if (!('IntersectionObserver' in window)) return;
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Velg elementer som skal få fade-in effekt
+  const elementsToAnimate = document.querySelectorAll(
+    '.section, .card, .deliver-card, .case-card, .step, .faq-item, .deliver-grid > *'
+  );
+
+  elementsToAnimate.forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+})();

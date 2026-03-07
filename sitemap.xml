@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.botpartner.no/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.botpartner.no/nettside</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.botpartner.no/nettside.html</loc>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.botpartner.no/ai-assistent-nettside</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.botpartner.no/ai-assistent-nettside.html</loc>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.botpartner.no/losninger</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.botpartner.no/losninger.html</loc>
+    <lastmod>2026-03-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.botpartner.no/system</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.7</priority>
+    <loc>https://www.botpartner.no/system.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.botpartner.no/priser.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <priority>0.9</priority>
   </url>
 </urlset>

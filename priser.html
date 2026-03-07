@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Priser – Nettside + AI-assistent | Botpartner</title>
+  <meta name="description" content="Transparent prismodell: pakkepris for etablering + fast månedlig drift. Få et konkret pristilbud på nettside og AI-assistent innen 24 timer." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.botpartner.no/priser" />
+
+  <!-- Open Graph / deling -->
+  <meta property="og:title" content="Priser – Nettside + AI-assistent | Botpartner" />
+  <meta property="og:description" content="Transparent prismodell: pakkepris for etablering + fast månedlig drift. Få et konkret pristilbud innen 24 timer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.botpartner.no/priser" />
+  <meta property="og:image" content="https://www.botpartner.no/preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Ikoner -->
+  <link rel="icon" href="favicon-v2.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-v2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-v2.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192-v2.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512-v2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-botpartner.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Botpartner",
+        "url": "https://www.botpartner.no/",
+        "email": "hei@botpartner.no",
+        "telephone": "+4741629927"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hva koster Botpartner?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prisen består av en etableringspris (pakkepris for nettside + AI-assistent) og en fast månedlig driftsavgift for vedlikehold og optimalisering. Konkret pris avhenger av omfang, integrasjoner og innhold. Vi sender et skredders forslag innen 24 timer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hva inkluderer månedsprisen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Månedlig drift inkluderer AI-vedlikehold, teknisk oppfølging, kontinuerlig optimalisering basert på brukerdata, og hosting. Løsningen er svært kostnadseffektiv i drift."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="botpartner_web.css" />
+
+  <script defer src="botpartner_web.js"></script>
+</head>
+
+<body class="page-priser">
+
+  <nav class="nav">
+    <a class="nav-logo" href="index.html#top" aria-label="Botpartner">
+      <img src="BP_icon_hvit.svg" alt="Botpartner" />
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="nettside.html">Nettside</a>
+      <a href="ai-assistent-nettside.html">AI-assistent</a>
+      <a href="losninger.html">Løsninger</a>
+      <a href="system.html">System</a>
+      <a href="priser.html" aria-current="page">Priser</a>
+      <a href="index.html#case">Case</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="#gjennomgang">Book gjennomgang</a>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero page-priser-hero">
+    <h1>Priser</h1>
+    <p class="hero-lead">
+      Transparent prismodell. Ingen skjulte kostnader.
+    </p>
+    <p class="hero-lead">
+      Etablering + månedlig drift = full kontroll.
+    </p>
+    <div class="hero-actions">
+      <a href="#gjennomgang" class="cta-button">Book gjennomgang</a>
+      <a href="#prosess" class="btn-outline">Se prosessen</a>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Pricing Structure -->
+    <section class="section">
+      <h2>Slik fungerer prismodellen</h2>
+      <p class="lead">
+        Botpartner leverer en helhetlig løsning: nettside + AI-assistent + drift.
+      </p>
+      <p class="lead">
+        Prisen består av to deler:
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Etableringspris</h3>
+          <p>Engangskostnad for bygging og implementering av systemet.</p>
+          <p><strong>Avhenger av:</strong></p>
+          <ul>
+            <li>Omfang (nettside, AI-assistent, eller begge)</li>
+            <li>Antall integrasjoner (PasientSky, CRM, booking-systemer)</li>
+            <li>Mengde innhold som skal struktureres</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Månedlig driftsavgift</h3>
+          <p>Fast månedspris for vedlikehold, optimalisering og teknisk drift.</p>
+          <p><strong>Inkluderer:</strong></p>
+          <ul>
+            <li>AI-vedlikehold og oppdatering av kunnskapsbase</li>
+            <li>Teknisk oppfølging og support</li>
+            <li>Kontinuerlig optimalisering basert på brukerdata</li>
+            <li>Hosting og infrastruktur (svært lave driftskostnader)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Custom Pricing -->
+    <section class="section bg-light" id="skreddersydd">
+      <h2>Hvorfor ikke faste priser?</h2>
+      <p class="lead">
+        Fordi hver løsning er skreddersydd for din virksomhet.
+      </p>
+
+      <div class="deliver-grid">
+        <div class="deliver-card">
+          <h4>Klinikk med PasientSky</h4>
+          <p>Trenger integrasjon mot journalsystem, automatisk booking, og FAQ for pasienter.</p>
+        </div>
+
+        <div class="deliver-card">
+          <h4>B2B-tjeneste</h4>
+          <p>Trenger kvalifisering av henvendelser, møtebooking via Calendly, og CRM-integrasjon.</p>
+        </div>
+
+        <div class="deliver-card">
+          <h4>Eiendomsmegler</h4>
+          <p>Trenger objektinformasjon, visningsbooking, og automatisk svar på standard spørsmål.</p>
+        </div>
+      </div>
+
+      <p class="deliver-note">
+        Hver løsning bygges med riktig funksjonalitet for ditt behov – derfor gir vi et konkret pristilbud etter gjennomgang.
+      </p>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="prosess">
+      <h2>Slik får du et pristilbud</h2>
+      <p class="lead">Vi sender et konkret forslag innen 24 timer.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Book gjennomgang</h3>
+            <p>15-minutters samtale hvor vi kartlegger behov, integrasjoner og mål.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Vi vurderer omfang</h3>
+            <p>Vi analyserer nåværende nettside (hvis du har), trafikk, og ønsket funksjonalitet.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Konkret pristilbud</h3>
+            <p>Du mottar et detaljert forslag med etableringspris, månedspris, og leveranseplan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#gjennomgang" class="cta-button">Book gjennomgang</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>Ofte stilte spørsmål</h2>
+
+      <details class="faq-item" open>
+        <summary>Hva koster det å drifte løsningen?</summary>
+        <p>Driftskostnadene er svært lave. For en typisk klinikk ligger de faktiske tekniske kostnadene (Netlify og OpenAI) under $1 per måned ved normal bruk. Månedsprisen du betaler dekker primært vedlikehold, optimalisering og support – ikke dyr infrastruktur.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Er det bindingstid?</summary>
+        <p>Vi anbefaler minimum 6 måneder for at løsningen skal få tilstrekkelig data til å optimaliseres, men vi diskuterer alltid vilkår i pristilbudet.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Hva hvis vi trenger endringer etter lansering?</summary>
+        <p>Mindre justeringer og oppdateringer av innhold inngår i den månedlige driftsavgiften. Større endringer (nye integrasjoner, ny funksjonalitet) prises separat.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kan vi bare kjøpe nettsiden, uten AI-assistent?</summary>
+        <p>Ja. Vi leverer også kun nettside dersom det er det du trenger. Mange starter med nettsiden og legger til AI-assistenten senere.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Hva skiller dette fra et abonnement hos Wix eller Webflow?</summary>
+        <p>Du får en skreddersydd løsning med full kontroll over koden, ingen plattformavhengighet, og svært rask ytelse. Kombinert med en kontrollert AI-assistent som faktisk konverterer trafikk til bookinger – ikke bare et standard kontaktskjema.</p>
+      </details>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact" id="gjennomgang">
+      <h2>Klar for å få et pristilbud?</h2>
+      <p class="lead">
+        Vi vurderer nettside, AI-assistent og integrasjoner – og sender deg et konkret forslag innen 24 timer.
+      </p>
+      <p class="lead">
+        Vi tar kun et begrenset antall nye prosjekter per måned for å sikre kvalitet og drift.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:hei@botpartner.no?subject=Forespørsel om gjennomgang&body=Hei! Jeg vil gjerne ha en gjennomgang av min bedrift for å få et pristilbud på nettside og/eller AI-assistent.%0D%0A%0D%0ABedrift:%0D%0ABransje:%0D%0ANåværende nettside (hvis aktuelt):%0D%0AHva ønsker du å oppnå?" class="cta-button">
+          Book gjennomgang
+        </a>
+      </div>
+      <p class="contact-note">
+        Eller send en e-post til <a href="mailto:hei@botpartner.no" class="contact-link">hei@botpartner.no</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <img src="BP_icon_hvit.svg" alt="Botpartner" class="footer-logo" />
+        <p>Nettsider og AI-assistenter for flere leads og bookinger.</p>
+      </div>
+      <div class="footer-col">
+        <strong>Kontakt</strong>
+        <p><a href="mailto:hei@botpartner.no">hei@botpartner.no</a></p>
+        <p><a href="tel:+4741629927">+47 416 29 927</a></p>
+      </div>
+      <div class="footer-col">
+        <strong>Sider</strong>
+        <p><a href="index.html">Hjem</a></p>
+        <p><a href="nettside.html">Nettside</a></p>
+        <p><a href="losninger.html">Løsninger</a></p>
+        <p><a href="ai-assistent-nettside.html">AI-assistent</a></p>
+        <p><a href="system.html">System</a></p>
+        <p><a href="priser.html">Priser</a></p>
+      </div>
+      <div class="footer-col">
+        <strong>Selskap</strong>
+        <p>Org.nr 936 933 149</p>
+        <p>&copy; 2026 Botpartner</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

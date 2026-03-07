@@ -1,6 +1,9 @@
 {
   "name": "Botpartner",
   "short_name": "Botpartner",
+  "description": "Nettsider og AI-assistenter for flere leads og bookinger",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192-v2.png",
@@ -13,7 +16,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#1a2332",
+  "background_color": "#1a2332",
   "display": "standalone"
 }
