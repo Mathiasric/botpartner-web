@@ -763,35 +763,110 @@ main .contact{
   opacity: .92;
 }
 
-/* DEMO: hold screenshots under kontroll (uten å påvirke andre bilder på siden) */
-.page-losninger #demo .case-right{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
+/* DEMO SHOWCASE */
+.demo-showcase{
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-/* Overstyr evt. global img { width:100% } kun i demo-seksjonen */
-.page-losninger #demo img{
-  width: auto !important;
-  height: auto !important;
+.demo-showcase-screens{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 40px;
+}
 
-  max-width: 520px !important;
-  max-height: 420px !important;
+.demo-screen-desktop,
+.demo-screen-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
-  object-fit: contain;
-  display:block;
-
+.demo-screen-desktop img{
+  max-width: 380px;
+  width: 100%;
+  height: auto;
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
-  background:#fff;
+  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+  background: #fff;
 }
 
-/* Demo-kortet litt mer "produkt" på store skjermer */
-.page-losninger #demo .case-card{
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
+.demo-screen-mobile img{
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+  background: #fff;
+}
+
+.demo-screen-label{
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.7);
+  letter-spacing: 0.02em;
+}
+
+.demo-try-link{
+  text-align: center;
+  margin: 20px 0 32px;
+}
+
+.demo-try-link a{
+  color: #e8734a;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color .15s;
+}
+
+.demo-try-link a:hover{
+  color: #f09070;
+}
+
+.demo-showcase-info{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.demo-highlights{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.demo-highlight{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.demo-highlight strong{
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.demo-highlight span{
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.4;
+}
+
+.demo-showcase-actions{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 .hero-actions{
   display:flex;
@@ -823,57 +898,33 @@ main .contact{
     padding: 0 10px;
   }
 
-  /* ===== DEMO =====
-     Sørg for at demo-kortet faktisk bruker GRID (ikke flex),
-     og stack alt pent på mobil.
-  */
-  .page-losninger #demo .case-card{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px;
-  }
-
-  .page-losninger #demo .case-actions{
+  /* ===== DEMO SHOWCASE MOBILE ===== */
+  .demo-showcase-screens{
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .page-losninger #demo .case-actions a{
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Demo media: ikke absolutt/overlapp på mobil */
-  .page-losninger #demo .demo-media{
-    position: static;
-    min-height: auto;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 24px;
   }
 
-  /* Skjul desktop-shot på mobil og vis mobil-shot kontrollert */
-  .page-losninger #demo .demo-desktop{
+  .demo-screen-desktop{
     display: none;
   }
 
-  .page-losninger #demo .demo-mobile{
-    position: static;
-    width: min(360px, 100%);
-    max-width: 360px;
-    margin: 0 auto;
-    border-radius: 18px;
+  .demo-screen-mobile img{
+    max-width: 300px;
   }
 
-  /* Overstyr “width:auto” regelen i demo på mobil så bildet oppfører seg responsivt */
-  .page-losninger #demo img{
-    width: 100% !important;
-    height: auto !important;
-    max-width: 360px !important;
-    max-height: none !important;
-    object-fit: contain;
+  .demo-highlights{
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .demo-showcase-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .demo-showcase-actions a{
+    text-align: center;
   }
 
   /* Chips: litt mindre på mobil */
@@ -966,14 +1017,6 @@ main .contact{
   }
 }
 
-/* Desktop: lås demo-layout riktig (hvis du vil ha 2 kolonner der) */
-@media (min-width: 901px){
-  .page-losninger #demo .case-card{
-    display: grid;
-    grid-template-columns: 1fr 520px;
-    align-items: center;
-  }
-}
 
 
 
