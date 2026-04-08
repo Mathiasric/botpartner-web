@@ -47,10 +47,7 @@ Claude must treat the NotebookLM strategy documents as authoritative.
 
 Primary strategic files:
 
-TRUTH.md  
-STRATEGY.md  
-EXECUTION.md  
-CEO_BRIEF.md  
+All files in notebooklm use cli
 
 These define:
 

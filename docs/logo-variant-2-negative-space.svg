@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="960" height="240">
+  <rect width="480" height="120" fill="#FFFFFF"/>
+
+  <!-- VARIANT 2: NEGATIV SPACE -->
+  <!-- Solid form der P og pil fremkommer gjennom hvite utskjæringer -->
+  <g transform="translate(16, 8)">
+    <!-- Ytre form: avrundet rektangel -->
+    <rect x="0" y="0" width="90" height="104" rx="14" fill="#0F172A"/>
+
+    <!-- Negativ space: P-stamme venstre margin -->
+    <rect x="0" y="0" width="14" height="104" rx="7" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="7" height="104" fill="#FFFFFF"/>
+
+    <!-- Negativ space: Øvre P-hull (danner buen) -->
+    <rect x="38" y="18" width="24" height="26" rx="13" fill="#FFFFFF"/>
+
+    <!-- Negativ space: Nedre del åpen - danner P (ikke D/B) -->
+    <!-- Chevron-formet utskjæring som peker mot høyre -->
+    <polygon points="28,56 90,76 90,86 28,104 28,86 60,76 28,66" fill="#FFFFFF"/>
+
+    <!-- Blå vertikal aksent langs P-stammens høyre kant -->
+    <rect x="24" y="12" width="5" height="42" rx="2.5" fill="#3B82F6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="126" y="70" font-family="Inter, 'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="46" fill="#0F172A" letter-spacing="-1">Provant</text>
+</svg>

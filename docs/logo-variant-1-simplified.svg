@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="960" height="240">
+  <rect width="480" height="120" fill="#FFFFFF"/>
+
+  <!-- VARIANT 1: FORENKLET & INTEGRERT -->
+  <!-- P der pilspissen er den naturlige avslutningen av P-ens bue -->
+  <g transform="translate(20, 10)">
+    <!-- P-stamme (vertikal) -->
+    <rect x="8" y="8" width="18" height="84" rx="3" fill="#0F172A"/>
+
+    <!-- P-bue som ender i en pilspiss -->
+    <!-- Øvre del av buen -->
+    <path d="
+      M 26,8
+      L 52,8
+      C 72,8 82,18 82,34
+      L 82,34
+      L 96,34
+      L 76,50
+      L 76,44
+      C 76,54 66,58 52,58
+      L 26,58
+      L 26,44
+      L 50,44
+      C 58,44 64,40 64,34
+      C 64,28 58,22 50,22
+      L 26,22
+      Z
+    " fill="#0F172A"/>
+
+    <!-- Blå pilspiss som forlenger P-ens retning -->
+    <polygon points="76,22 96,34 76,46" fill="#3B82F6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="130" y="70" font-family="Inter, 'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="46" fill="#0F172A" letter-spacing="-1">Provant</text>
+</svg>

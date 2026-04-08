@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#FFFFFF" rx="4"/>
+  <!-- Negativ space P, skalert for 32x32 -->
+  <g transform="translate(4, 3)">
+    <!-- Solid rektangel -->
+    <rect x="0" y="0" width="24" height="26" rx="4" fill="#0F172A"/>
+    <!-- Negativ space: P-hull -->
+    <rect x="10" y="5" width="7" height="7" rx="3.5" fill="#FFFFFF"/>
+    <!-- Negativ space: chevron-åpning nedre del -->
+    <polygon points="7,15 24,20 24,23 7,26 7,22 16,20 7,18" fill="#FFFFFF"/>
+    <!-- Blå aksent -->
+    <rect x="6" y="4" width="2" height="11" rx="1" fill="#3B82F6"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+# API keys and local MCP config
+.mcp.json
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# Playwright MCP logs
+.playwright-mcp/
+
+# Loose screenshots and temp images in root
+/*.png
+/*.jpeg
+/*.jpg
+/*.svg
+
+# Temporary screenshot captures
+screenshots/
+
+# OS files
+.DS_Store
+Thumbs.db
